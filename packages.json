@@ -1,0 +1,7 @@
+{
+    "name": "@hundh/contao-ux-turbo-encore",
+    "version": "1.0.0",
+    "dependencies": {
+        "@hotwired/turbo": "^8.0.23"
+    }
+}
