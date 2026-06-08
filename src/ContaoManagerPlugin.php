@@ -2,6 +2,7 @@
 
 namespace HeimrichHannot\ContaoUxTurboEncore;
 
+use Contao\CoreBundle\ContaoCoreBundle;
 use Contao\ManagerPlugin\Bundle\BundlePluginInterface;
 use Contao\ManagerPlugin\Bundle\Config\BundleConfig;
 use Contao\ManagerPlugin\Bundle\Parser\ParserInterface;
@@ -15,7 +16,8 @@ class ContaoManagerPlugin implements BundlePluginInterface
     {
         return [
             BundleConfig::create(TurboBundle::class),
-            BundleConfig::create(HeimrichHannotContaoUxTurboEncoreBundle::class),
+            BundleConfig::create(HeimrichHannotContaoUxTurboEncoreBundle::class)
+            ->setLoadAfter([ContaoCoreBundle::class]),
         ];
     }
 }

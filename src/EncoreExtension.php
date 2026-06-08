@@ -15,7 +15,8 @@ class EncoreExtension implements EncoreExtensionInterface
     public function getEntries(): array
     {
         return [
-            EncoreEntry::create('huh_ux_turbo_encore', 'assets/js/turbo.js'),
+            EncoreEntry::create('huh_ux_turbo_encore', 'assets/js/turbo.js')
+                ->setIsHeadScript(true),
         ];
     }
 }

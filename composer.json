@@ -3,7 +3,7 @@
   "type": "contao-bundle",
   "description": "This bundle brings Symfony UX Turbo integration to Encore Bundle enabled contao projects.",
   "license": "LGPL-3.0-or-later",
-  "homepage": "https://github.com/heimrichhannot/contao-encore-bundle",
+  "homepage": "https://github.com/heimrichhannot/contao-ux-turbo-encore",
   "authors": [
     {
       "name": "Heimrich & Hannot GmbH",
@@ -13,7 +13,7 @@
     }
   ],
   "support": {
-    "issues": "https://github.com/heimrichhannot/contao-encore-bundle/issues"
+    "issues": "https://github.com/heimrichhannot/contao-ux-turbo-encore/issues"
   },
   "require": {
     "php": "^8.2",
