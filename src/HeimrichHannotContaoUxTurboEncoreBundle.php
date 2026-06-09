@@ -8,6 +8,19 @@ use Symfony\Component\HttpKernel\Bundle\AbstractBundle;
 
 class HeimrichHannotContaoUxTurboEncoreBundle extends AbstractBundle
 {
+    public function prependExtension(ContainerConfigurator $configurator, ContainerBuilder $container): void
+    {
+        $container->prependExtensionConfig('webpack_encore', [
+            'script_attributes' => [
+                'defer' => true,
+                'data-turbo-track' => 'reload',
+            ],
+            'link_attributes' => [
+                'data-turbo-track' => 'reload',
+            ],
+        ]);
+    }
+
     public function loadExtension(array $config, ContainerConfigurator $configurator, ContainerBuilder $container): void
     {
         $configurator->import('../config/services.php');
@@ -17,6 +30,4 @@ class HeimrichHannotContaoUxTurboEncoreBundle extends AbstractBundle
     {
         return \dirname(__DIR__);
     }
-
-
 }
